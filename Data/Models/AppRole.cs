@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using TM.Data.Interfaces;
 
 namespace TM.Data.Models
@@ -7,6 +8,7 @@ namespace TM.Data.Models
     public class AppRole : IModificationHistory
     {
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
@@ -16,7 +18,7 @@ namespace TM.Data.Models
         public string Desc { get; set; }
 
         [Required]
-        [Range(0,1, ErrorMessage ="Must be a 0 or 1. (0 is User Level, 1 is Facility Level)")]
+        [Range(0,2, ErrorMessage ="Must be a 0, 1, or 2. Facility Logon = 0, User Logon = 1, User at Facility = 2")]
         public int Level { get; set; }
 
         public bool DeleteFlag { get; set; }

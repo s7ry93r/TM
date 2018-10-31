@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using TM.Data.Interfaces;
 
 namespace TM.Data.Models
@@ -7,9 +8,10 @@ namespace TM.Data.Models
     public class AppUser : IModificationHistory
     {
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public int? AppLogonId { get; set; }
+        public int? FacilityID { get; set; }
 
         [Required]
         [StringLength(30, MinimumLength = 8, ErrorMessage = "Name must between 8 and 30 characters long")]
@@ -23,7 +25,7 @@ namespace TM.Data.Models
         public string UserSmartPhone { get; set; }
 
         [Required]
-        public int Level = 0;
+        public int Level { get; set; }
 
         public bool DeleteFlag { get; set; }
         public DateTime DateCreated { get; set; }

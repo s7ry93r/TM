@@ -52,13 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AppEntityRole.cs" />
-    <Compile Include="Models\AppLogon.cs" />
     <Compile Include="Models\AppRole.cs" />
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Interfaces\IModificationHistory.cs" />
     <Compile Include="Models\AppUserFacility.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\UserRepo.cs" />
     <Compile Include="TMContext.cs" />
   </ItemGroup>
   <ItemGroup>

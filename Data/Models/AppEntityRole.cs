@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using TM.Data.Interfaces;
 
 namespace TM.Data.Models
@@ -7,6 +8,7 @@ namespace TM.Data.Models
     public class AppEntityRole : IModificationHistory
     {
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]

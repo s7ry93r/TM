@@ -9,7 +9,6 @@ namespace TM.Data
     public class TMContext : DbContext
     {
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
-        public DbSet<AppLogon> AppLogons { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }
         public DbSet<AppEntityRole> AppEntityRoles { get; set; }
